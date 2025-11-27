@@ -1,33 +1,30 @@
-# Reddit ModSafe Tool
+# Reddit Learning Project
 
-A fully open-source, non-commercial moderator assistance tool for removing spam and prohibited links.
+A personal, non-commercial Python project to practice using the Reddit API and learn data analysis.
 
 ## Purpose (Fully compliant with Reddit's Responsible Builder Policy)
-- Used only in subreddits where I am an active moderator
-- Automatically detects and removes posts containing banned domains
-- Removes duplicate/repetitive spam posts
-- Generates simple daily moderation reports
-- **Never** used for AI training, data resale, advertising, voting manipulation, or auto-commenting
+This is a **personal learning and experimentation project** only. I am teaching myself:
+- How to use PRAW and OAuth2
+- Basic data analysis with pandas
+- Working with public Reddit data responsibly
 
-## Target subreddits (I have moderator permissions)
-- r/yoursubreddit1
-- r/yoursubreddit2
-(Replace with your actual subreddits)
+**No commercial use · No AI training · No data resale · No automation beyond reading public posts**
+
+## What the script does (read-only)
+- Fetches the newest 100–500 posts from a few public subreddits I enjoy
+- Saves only: title, score, number of comments, creation time, subreddit name
+- Performs simple statistics (e.g., most active hours, average score)
+- All data is stored locally and deleted after analysis
+
+## Subreddits currently used (all public, high-traffic)
+- r/AskReddit
+- r/explainlikeimfive
+- r/dataisbeautiful
+- r/todayilearned
+(These may change as I explore different topics)
 
 ## Technical details
-- Language: Python 3 + PRAW
-- Authentication: OAuth2 using my moderator account only
-- Expected request rate: ≤ 40 requests/minute (well below 60 rpm limit)
-- Logs retained for max 7 days, then permanently deleted
-- User-Agent: ModSafeTool/1.0 (by u/yourredditusername; non-commercial moderator tool)
-
-## Privacy & Compliance
-- No personal user data is collected or stored
-- No long-term retention of post/comment content
-- Source code is fully public and available for review at any time
-- Strictly follows Reddit API Terms of Use and Responsible Builder Policy
-
-## License
-MIT License – free for anyone to use, modify, and distribute
-
-Contact: u/yourredditusername
+- Python + PRAW
+- Read-only OAuth2 scope: identity, history, read
+- Rate: maximum 30–40 requests per minute
+- User
